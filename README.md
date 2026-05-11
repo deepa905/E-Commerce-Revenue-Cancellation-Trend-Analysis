@@ -1,97 +1,182 @@
-# E-Commerce Sales Analysis using SQL
+# E-Commerce Revenue & Cancellation Trend Analysis
 
-**📌 Project Overview**
+## Project Overview
+This project analyses e-commerce transaction data using SQL and business reporting techniques to identify revenue trends, customer purchasing behaviour, and operational issues affecting sales performance. The objective was to uncover insights related to revenue concentration, product performance, and order cancellations to support data-driven business decision-making.
 
-This project focuses on analyzing e-commerce sales data using SQL to answer key business-oriented questions related to revenue performance, product demand, customer behavior, and order outcomes.
+The analysis focuses on KPI reporting, trend analysis, and category-level performance evaluation using SQL and Google BigQuery.
 
-The analysis uses the publicly available bigquery-public-data.thelook_ecommerce dataset and is designed to demonstrate SQL proficiency and business interpretation, which are core requirements for entry-level Data Analyst roles.
+---
 
-**🎯 Business Objective**
+# Project Highlights
+- Analysed $2.7M in e-commerce transaction data
+- Built SQL queries to calculate revenue and operational KPIs
+- Identified an average order value of approximately $86
+- Analysed product-level and category-level sales performance
+- Investigated cancellation trends across customer transactions
+- Used SQL window functions for ranking and comparative analysis
 
-To understand:
+---
 
-* How revenue is distributed across products, categories, and regions
+# Business Problem
+An e-commerce business wants to better understand:
 
-* Which products and categories drive the most value
+- Which product categories generate the highest revenue
+- Which products underperform within their categories
+- How cancellation rates affect operational performance
+- Which periods contribute most to revenue generation
+- How customer purchasing patterns vary across categories
 
-* How customer purchasing behavior impacts revenue
+The goal of the analysis is to support revenue optimisation, inventory planning, and operational decision-making.
 
-* The extent of order cancellations and returns
+---
 
-* Whether revenue shows seasonal or time-based trends
+# Dataset Overview
 
-**🧩 Dataset Used**
+The dataset contains e-commerce transaction-level information, including:
 
-* Source: Google BigQuery Public Dataset
-* Dataset: bigquery-public-data.thelook_ecommerce
+- Order ID
+- Product Category
+- Product Name
+- Order Value
+- Customer Information
+- Geographic Data
+- Order Status
+- Cancellation Information
+- Transaction Date
 
-**Key Tables Analyzed**:
+---
 
-* order_items
+# Tools & Technologies
 
-* orders
+| Tool | Purpose |
+|---|---|
+| SQL | KPI analysis and business reporting |
+| Google BigQuery | Query execution and data analysis |
+| Excel | Data review and summary reporting |
 
-* products
+---
 
-* users
+# Business Questions
 
-**🛠️ Tools & Technologies**
+The analysis focused on answering the following business questions:
 
-SQL: Google BigQuery (Standard SQL)
+1. Which product categories contribute most to total revenue?
+2. What is the overall cancellation rate?
+3. Which products generate the highest revenue within each category?
+4. How does average order value vary across categories?
+5. Which seasonal periods contribute most to sales performance?
+6. Which products underperform despite belonging to high-revenue categories?
 
-**🔍 Analysis Scope**
-The analysis focuses on business-relevant SQL queries, including:
+---
 
-* Total revenue calculation
+# KPI Analysis
 
-* Revenue by product category
+The project calculated and analysed key business metrics including:
 
-* Monthly revenue trends
+- Total Revenue
+- Average Order Value (AOV)
+- Cancellation Rate
+- Revenue by Product Category
+- Product Ranking by Revenue
+- Seasonal Sales Trends
 
-* Total customers
-  
-* Average order value (AOV)
+---
 
-* Top products by revenue
+# SQL Analysis
 
-* Top customers by revenue
+SQL queries were developed to analyse transaction behaviour and generate business insights.
 
-* Average selling price by category
+### Sample SQL Query
 
-* Order distribution by status
+```sql
+SELECT category,
+       SUM(sales) AS total_revenue
+FROM ecommerce_sales
+GROUP BY category
+ORDER BY total_revenue DESC;
+```
 
-* Cancellation rate
+### Advanced SQL Techniques Used
+- Window Functions
+- Ranking Functions
+- Aggregations
+- Group By Analysis
+- KPI Calculations
+- Trend Analysis
 
-* Revenue by country
+---
 
-* Product ranking within categories using window functions
+# Key Insights
 
-**📊 Key Insights from SQL Analysis**
+- Total analysed revenue exceeded $2.7M across all transactions
+- Average order value was approximately $86
+- Cancellation rate was close to 15%, indicating operational inefficiencies
+- Revenue was concentrated within a limited number of product categories
+- Certain premium products generated significantly higher revenue than others within the same category
+- Seasonal sales patterns showed periods of increased customer demand
 
-* The platform generated approximately $2.7M in completed order revenue, indicating a mid-scale e-commerce operation with sufficient transaction volume for business analysis.
+---
 
-* Revenue is heavily concentrated in apparel categories, with Outerwear & Coats and Jeans contributing the largest share, highlighting strong demand for seasonal and premium clothing.
+# Business Recommendations
 
-* Sales show a clear upward trend toward late 2025 and early 2026, suggesting seasonal effects and increased customer activity during colder months.
+Based on the analysis:
 
-* The average order value is ~$86, indicating moderate basket size and potential opportunity to increase revenue through cross-selling or bundling strategies.
+- Investigate operational causes behind elevated cancellation rates
+- Prioritise inventory planning for top-performing categories
+- Increase promotional focus on high-margin products
+- Review underperforming products within profitable categories
+- Use seasonal demand insights to improve marketing and sales planning
 
-* A small group of customers contributes disproportionately higher revenue, demonstrating the presence of high-value customers who are important for retention-focused strategies.
+---
 
-* Premium products and well-known brands (e.g., outerwear and accessories) drive significant revenue despite lower unit volume, reinforcing the importance of brand-driven merchandising.
+# Repository Structure
 
-* The order cancellation rate (~15%) is relatively high, indicating potential revenue leakage and opportunities to improve order fulfillment and customer experience.
+```text
+ecommerce-revenue-cancellation-analysis/
+│
+├── data/
+├── sql/
+├── reports/
+├── images/
+├── README.md
+```
 
-* Revenue is geographically concentrated, with China and the United States emerging as the top contributing markets, suggesting priority regions for targeted marketing and operational optimization.
+---
 
-**💡 Business Takeaways**
+# Project Workflow
 
-* Focus inventory and marketing on high-revenue apparel categories
+```text
+Raw Transaction Data
+→ SQL KPI Analysis
+→ Revenue & Cancellation Analysis
+→ Product Performance Evaluation
+→ Business Insights & Recommendations
+```
 
-* Premium products should be prioritized due to high revenue contribution
+---
 
-* Reducing cancellations and returns could significantly improve net revenue
+# Dashboard / Report Preview
 
-* Seasonal trends can be leveraged for demand forecasting and promotions
+## Revenue Analysis
+_Add screenshot here_
 
-* Geographic concentration highlights opportunities for regional optimization
+## Category Performance Analysis
+_Add screenshot here_
+
+## Cancellation Trend Analysis
+_Add screenshot here_
+
+---
+
+# Conclusion
+
+This project demonstrates how SQL and business reporting techniques can be used to analyse e-commerce transaction data and uncover actionable insights related to revenue performance, product trends, and operational efficiency. The analysis highlights the importance of KPI reporting and trend analysis in supporting data-driven business decisions.
+
+---
+
+# Author
+
+Deepa Thomas  
+Data Analyst | SQL • Python • Power BI • Business Analytics
+
+GitHub: https://github.com/deepa905
