@@ -152,19 +152,6 @@ Raw Transaction Data
 
 ---
 
-# Dashboard / Report Preview
-
-## Revenue Analysis
-_Add screenshot here_
-
-## Category Performance Analysis
-_Add screenshot here_
-
-## Cancellation Trend Analysis
-_Add screenshot here_
-
----
-
 # Conclusion
 
 This project demonstrates how SQL and business reporting techniques can be used to analyse e-commerce transaction data and uncover actionable insights related to revenue performance, product trends, and operational efficiency. The analysis highlights the importance of KPI reporting and trend analysis in supporting data-driven business decisions.
