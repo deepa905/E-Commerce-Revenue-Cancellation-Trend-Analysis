@@ -44,6 +44,13 @@ The dataset contains e-commerce transaction-level information, including:
 - Cancellation Information
 - Transaction Date
 
+  ## Dataset Source
+
+This project uses the publicly available `thelook_ecommerce` dataset from Google BigQuery public datasets.
+
+Dataset Link:
+https://console.cloud.google.com/marketplace/product/bigquery-public-data/thelook-ecommerce
+
 ---
 
 # Tools & Technologies
@@ -134,7 +141,6 @@ Based on the analysis:
 ```text
 ecommerce-revenue-cancellation-analysis/
 │
-├── data/
 ├── sql/
 ├── README.md
 ```
