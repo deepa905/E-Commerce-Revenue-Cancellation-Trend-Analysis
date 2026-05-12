@@ -136,11 +136,8 @@ ecommerce-revenue-cancellation-analysis/
 │
 ├── data/
 ├── sql/
-├── reports/
-├── images/
 ├── README.md
 ```
-
 ---
 
 # Project Workflow
